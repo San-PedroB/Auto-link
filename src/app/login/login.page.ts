@@ -24,7 +24,7 @@ export class LoginPage implements OnInit {
    }
    
    async iniciarSesion(){
-    let f = this.formularioLogin.value;
+    console.log("rama pedro prueba")
     // Validación del formulario
     if(this.formularioLogin.invalid){
       const toastErrorCampos = await this.toastController.create({
@@ -36,12 +36,12 @@ export class LoginPage implements OnInit {
       return;
     }
      // Obtener los datos almacenados del formulario de registro
-     const datosAlmacenados = this.formularioService.getDatos(); // Asegúrate de que "setDatos" haya guardado antes
-     // Comparar el email ingresado con el almacenado en el servicio
-    if(this.formularioLogin.value.email != datosAlmacenados.email && 
+     const datosAlmacenados = this.formularioService.getDatos(); // Aseguurate de que "setDatos" haya guardado antes
+     // Compara el email ingresado con el almacenado en el servicio
+    if(this.formularioLogin.value.email != datosAlmacenados.email || 
       this.formularioLogin.value.password != datosAlmacenados.password){
         const toastErrorUsuario = await this.toastController.create({
-          message: "Usuario no encontrado",
+          message: "Correo o contraseña incorrectos. Por favor, intenta nuevamente.",
           duration: 3000,
           position: 'top'
         })
