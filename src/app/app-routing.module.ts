@@ -27,6 +27,14 @@ const routes: Routes = [
     path: 'perfil-usuario',
     loadChildren: () => import('./perfil-usuario/perfil-usuario.module').then( m => m.PerfilUsuarioPageModule)
   },
+  {
+    path: 'crear-viaje',
+    loadChildren: () => import('./crear-viaje/crear-viaje.module').then( m => m.CrearViajePageModule)
+  },
+  {
+    path: 'viajes-en-curso',
+    loadChildren: () => import('./viajes-en-curso/viajes-en-curso.module').then( m => m.ViajesEnCursoPageModule)
+  },
 ];
 
 @NgModule({

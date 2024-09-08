@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Viajes en Curso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+
+        <!-- Aquí estarán los viajes estáticos (falsos) que no tendrán interacción -->
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Viaje estático 1</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Origen: Falso Origen 1</p>
+            <p>Destino: Falso Destino 1</p>
+            <p>Precio: $1000</p>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Viaje estático 2</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Origen: Falso Origen 2</p>
+            <p>Destino: Falso Destino 2</p>
+            <p>Precio: $1500</p>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Tarjeta del viaje creado solo si los datos están completos -->
+        <ion-card *ngIf="viaje">
+          <ion-card-header>
+            <ion-card-title>{{ viaje.value.origen }} → {{ viaje.value.destino }}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <p><strong>Origen:</strong> {{ viaje.value.origen }}</p>
+            <p><strong>Destino:</strong> {{ viaje.value.destino }}</p>
+            <p><strong>Precio:</strong> {{ viaje.value.precio | currency }}</p>
+
+            <!-- Botón para terminar el viaje -->
+            <ion-button expand="full" color="danger" (click)="terminarViaje()">Terminar Viaje</ion-button>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

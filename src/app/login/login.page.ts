@@ -24,7 +24,6 @@ export class LoginPage implements OnInit {
    }
    
    async iniciarSesion(){
-    console.log("rama pedro prueba")
     // Validación del formulario
     if(this.formularioLogin.invalid){
       const toastErrorCampos = await this.toastController.create({
