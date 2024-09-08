@@ -27,4 +27,14 @@
     --padding-start: 20px;
     --padding-end: 20px;
   }
-  
+    /* Animaciones para la aparición de nombre, apellido y correo */
+#nombre, #apellido, #correo {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#nombre.loaded, #apellido.loaded, #correo.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
