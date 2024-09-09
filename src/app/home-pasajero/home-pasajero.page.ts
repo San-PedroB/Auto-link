@@ -32,8 +32,15 @@ export class HomePasajeroPage implements OnInit {
     this.datosFormulario = this.formularioService.getDatos();
     // Verificar si los datos se cargan correctamente
     console.log('Datos del usuario:', this.datosFormulario);
+
+    const welcomeMessage = document.querySelector('#welcomeMessage');
+    if (welcomeMessage) {
+      const animation = this.animationCtrl.create()
+        .addElement(welcomeMessage)
+        .duration(4000) // duración de 4 segundo
+        .fromTo('opacity', '0', '1'); // de menos a más opacidad
+
+      animation.play(); // ejecutar la animación
+    }
   }
-
-
-
 }

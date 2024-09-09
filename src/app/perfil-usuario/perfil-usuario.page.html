@@ -16,21 +16,20 @@
     <ion-card-content>
       <ion-item class="perfil-item">
         <ion-label><strong>Nombre:</strong></ion-label>
-        <ion-text> {{datosFormulario.nombre}} </ion-text> <!-- Nombre del usuario -->
+        <ion-text id="nombre"> {{datosFormulario.nombre}} </ion-text> <!-- Nombre del usuario -->
       </ion-item>
       <ion-item class="perfil-item">
         <ion-label><strong>Apellido:</strong></ion-label>
-        <ion-text> {{datosFormulario.apellido}} </ion-text> <!-- Apellido del usuario -->
+        <ion-text id="apellido"> {{datosFormulario.apellido}} </ion-text> <!-- Apellido del usuario -->
       </ion-item>
       <ion-item class="perfil-item">
         <ion-label><strong>Correo:</strong></ion-label>
-        <ion-text> {{datosFormulario.email}} </ion-text> <!-- Correo del usuario -->
+        <ion-text id="correo"> {{datosFormulario.email}} </ion-text> <!-- Correo del usuario -->
       </ion-item>
     </ion-card-content>
   </ion-card>
 
   <!-- Botón para editar perfil -->
-  <ion-button routerLink="/cambiar-password" expand="block" color="primary" class="boton-editar">
+  <ion-button expand="block" color="primary" class="boton-editar" routerLink="/cambiar-password"></ion-button>
     Cambiar Contraseña
-  </ion-button>
 </ion-content>

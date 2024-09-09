@@ -16,6 +16,18 @@ export class PerfilUsuarioPage implements OnInit {
     this.datosFormulario = this.formularioService.getDatos();
     // Verificar si los datos se cargan correctamente
     console.log('Datos del usuario:', this.datosFormulario);
-  }
 
+        // Añadir clase 'loaded' a cada uno de los elementos de manera escalonada
+    setTimeout(() => {
+      document.getElementById('nombre')?.classList.add('loaded');
+    }, 500);
+
+    setTimeout(() => {
+      document.getElementById('apellido')?.classList.add('loaded');
+    }, 1000);
+
+    setTimeout(() => {
+      document.getElementById('correo')?.classList.add('loaded');
+    }, 1500);
+  }
 }
