@@ -38,6 +38,7 @@
 
         <!-- Viaje creado solo si los datos están completos -->
         <ion-card *ngIf="viaje">
+          <ion-card-header>Tu viaje</ion-card-header>
           <ion-card-header>
             <ion-card-title>{{ viaje.value.origen }} → {{ viaje.value.destino }}</ion-card-title>
           </ion-card-header>
